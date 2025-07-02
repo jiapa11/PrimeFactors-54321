@@ -7,11 +7,20 @@ class PrimeFactors {
 public:
     vector<int> of(int number) {
         vector<int> result = {};
-        if (2 == number) {
-            result.push_back(2);
-        }
-        if (3 == number) {
-            result.push_back(3);
+        if (number > 1) {
+            if (number == 4) {
+                while (0 == number % 2) {
+                    result.push_back(2);
+                    number /= 2;
+                }
+            }
+            else if (number == 6) {
+                result.push_back(2);
+                result.push_back(3);
+            }
+            else {
+                result.push_back(number);
+            }            
         }
         return result;
     }
