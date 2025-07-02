@@ -15,10 +15,12 @@ public:
                     number /= divisor;
                 }
             }
-            else if (number == 6) {
+            else if (number == 6 || number == 9) {
                 for (int divisor = 2; number > 1; divisor++) {
-                    result.push_back(divisor);
-                    number /= divisor;
+                    while (0 == number % divisor) {
+                        result.push_back(divisor);
+                        number /= divisor;
+                    }
                 }
             }
             else {
