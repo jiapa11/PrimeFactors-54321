@@ -43,6 +43,12 @@ TEST_F(PrimeFixture, Of9) {
     EXPECT_EQ(expected, prime_factor.of(9));
 }
 
+TEST_F(PrimeFixture, Of12) {
+    //PrimeFactors prime_factor;
+    expected = { 2,2,3 };
+    EXPECT_EQ(expected, prime_factor.of(12));
+}
+
 int main(void) {
     ::testing::InitGoogleTest();
     return RUN_ALL_TESTS();
